@@ -1,0 +1,37 @@
+{%extends 'master.html'%}
+
+{%block content%}
+
+<div class="container" style="margin: 100px 350px;">
+    <div>
+        {% for question in questions %}
+        <p>{{question.que}}</p>
+          <div class="form-check">
+            <label class="form-check-label" for="radio1">
+                <input type="radio" class="form-check-input" id="radio1" name="{{question.id}}" value="option1">{{question.option1}}
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="radio2">
+                <input type="radio" class="form-check-input" id="radio2" name="{{question.id}}" value="option2">{{question.option2}}
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="radio3">
+                <input type="radio" class="form-check-input" id="radio3" name="{{question.id}}" value="option3">{{question.option3}}
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="radio4">
+                <input type="radio" class="form-check-input" id="radio4" name="{{question.id}}" value="option4">{{question.option4}}
+            </label>
+          </div>
+          <p>Ans :- {{question.ans}}</p>
+          <hr>
+          {%endfor%}
+          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        <!-- </form>  -->
+    </div>
+  
+  </div>
+{%endblock%}

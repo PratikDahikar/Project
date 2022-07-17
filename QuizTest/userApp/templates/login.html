@@ -1,0 +1,17 @@
+{%extends "master.html"%}
+
+{%block content%}
+
+<div class="container" style="margin: 150px 100px;">
+    <h2>Login</h2>
+    <form method="post">
+        {%csrf_token%}
+        <table class="table">
+            <tr><td>User Name</td><td><input type="text" class="form-control" name="uname" required></td></tr>
+            <tr><td>Password</td><td><input type="text" class="form-control" name="pwd" required></td></tr>
+            <tr><td><input type="submit" value="Login" class="btn btn-success"></td><td class="text-danger">{{massage}}</td></tr>
+        </table>  
+    </form>
+</div>
+
+{%endblock%}

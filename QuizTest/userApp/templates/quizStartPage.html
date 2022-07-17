@@ -1,0 +1,35 @@
+{%extends 'master.html'%}
+
+{%block content%}
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container" style="padding:50px 50px 50px 50px;">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">{{cat.cat_name}} Quiz</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <p class="lead">You can test your {{cat.cat_name}} skills with <b>Buddy.com</b> Quiz.</p>      
+        <hr>
+        <h2>The Test</h2>
+        <p class="lead">The test contains 10 questions and there is no time limit.</p>
+        <p class="lead">The test is not official, it's just a nice way to see how much you know, or don't know, about {{cat.cat_name}}.</p>
+        <hr>
+        <h2 >Count Your Score</h2>
+        <p class="lead">You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 10 points.</p>
+        <div class="container p-3 my-3 border">
+            <h1>Start the Quiz</h1>
+            <p class="lead">Good luck!</p>
+        </div>
+
+
+        <!-- About Section Button-->
+        <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="/TestPage/{{cat.id}}">Start Quiz ></a>
+        </div>
+    </div>
+</section>
+{%endblock%}

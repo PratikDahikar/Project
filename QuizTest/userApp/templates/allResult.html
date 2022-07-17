@@ -1,0 +1,39 @@
+{%extends "master.html"%}
+
+{%block content%}
+<section class="page-section">
+    <div class="container" style="margin-top: 50px;">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Over all Performance</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- <div>
+          <h4>{{cats}}</h4>
+          <h4>{{results}}</h4>
+        </div>
+        <hr> -->
+        <center>
+            <div style="margin: 15px 100px;">
+                {%for cat in cats%}
+                <h2 class="text-primary">{{cat.cat_name}}</h2>
+                <table class="table table-striped" style="width: 50%; margin-bottom: 50px; ">
+                <thead class="text-secondary">
+                  <tr><th>Correct</th><th>Total</th><th>Percentage</th></tr>
+                </thead>
+                <tbody>
+                  {%for result in results%}
+                    {% if result.category.cat_name == cat.cat_name %}
+                      <tr><td>{{result.correct}}</td><td>{{result.total}}</td><td>{{result.per}}</td></tr>               
+                    {%endif%}
+                  {%endfor%}
+                </tbody>
+                </table>
+                {%endfor%}
+            </div>
+        </center>
+    </div>
+</section>
+{%endblock%}
